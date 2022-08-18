@@ -18,11 +18,12 @@
     </span>
   </td>
 </template>
+
 <script lang="ts">
-import { defineComponent, computed } from 'vue'
-import TaskItem from './TaskItem.vue'
+import { defineComponent } from 'vue'
 import { useStore } from '@/store'
 import { MutationType } from '@/store/mutations'
+
 export default defineComponent({
   props: {
     id: { type: Number, required: true },
@@ -30,9 +31,6 @@ export default defineComponent({
     createdBy: { type: String, required: true },
     assignedTo: { type: String, required: true },
     completed: { type: Boolean, required: true }
-  },
-  components: {
-
   },
   setup(props) {
     const store = useStore()
